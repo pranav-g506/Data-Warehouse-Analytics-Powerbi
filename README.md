@@ -2,28 +2,28 @@
 
 ## 🔍 Project Overview
 
-This project demonstrates an **end-to-end Data Analytics workflow**, starting from raw data exploration to advanced business analytics and Power BI dashboarding.
+This project demonstrates an **end-to-end Data Analytics workflow**, starting from database initialization and exploration to advanced analytics and Power BI dashboarding.
 
-The goal of the project is to:
-- Design a clean analytical data model
-- Perform structured SQL-based analysis
-- Generate actionable business insights
+The objective of this project is to:
+- Design a structured analytical data model
+- Perform systematic SQL-based analysis
+- Generate meaningful business insights
 - Build an interactive Power BI dashboard for decision-making
 
-This project follows **industry-standard analytics practices** and is suitable for **Data Analyst / BI roles**.
+This project follows **industry-standard analytics practices** and is suitable for **Data Analyst / Business Intelligence roles**.
 
 ---
 
 ## 🧱 Data Model
 
-The project follows a **star-schema-like structure**:
+The project uses a **star-schema-like structure** consisting of:
 
 ### 🟨 Dimension Tables
-- `dim_customers` – Customer demographic information  
-- `dim_products` – Product and category details  
+- `dim_customers` – customer demographics and attributes  
+- `dim_products` – product, category, and cost information  
 
 ### 🟦 Fact Table
-- `fact_sales` – Transactional sales data  
+- `fact_sales` – transactional sales data (orders, quantity, revenue)
 
 ---
 
@@ -31,182 +31,121 @@ The project follows a **star-schema-like structure**:
 
 - **Database**: MySQL 8+
 - **Query Language**: SQL
-- **Visualization**: Power BI
+- **Visualization Tool**: Power BI
+- **Analytics Concepts**:
+  - Exploratory Data Analysis (EDA)
+  - Time-Series Analysis
+  - Cumulative Analysis
+  - Ranking & Performance Analysis
+  - Segmentation & Contribution Analysis
 - **Version Control**: Git & GitHub
-
-### Analytics Concepts Used
-- Exploratory Data Analysis (EDA)
-- Change Over Time Analysis
-- Cumulative Analysis
-- Performance Analysis
-- Ranking Analysis
-- Data Segmentation
-- Part-to-Whole Analysis
-- Business Reporting
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-├── sql/
-│   ├── 03_database_exploration.sql
-│   ├── 04_dimensions_exploration.sql
-│   ├── 05_date_range_exploration.sql
-│   ├── 06_measures_exploration.sql
-│   ├── 07_magnitude_analysis.sql
-│   ├── 08_ranking_analysis.sql
-│   ├── 09_eda.sql
-│   ├── 10_analytics.sql
-│   ├── 11_change_over_time_analysis.sql
-│   ├── 12_cumulative_analysis.sql
-│   ├── 13_performance_analysis.sql
-│   ├── 14_data_segmentation.sql
-│   ├── 15_part_to_whole_analysis.sql
-│   ├── 16_customer_report.sql
-│   └── 17_product_report.sql
-│
-├── powerbi/
-│   └── Sales_Analytics_Dashboard.pbix
-│
-├── screenshots/
-│   └── (dashboard images)
-│
-└── README.md
+scripts/
+├── 00_init_database.sql
+├── 01_database_exploration.sql
+├── 02_dimensions_exploration.sql
+├── 03_date_range_exploration.sql
+├── 04_measures_exploration.sql
+├── 05_magnitude_analysis.sql
+├── 06_ranking_analysis.sql
+├── 07_exploratory_data_analysis(EDA).sql
+├── 08_final_analytics.sql
+├── 09_change_over_time_analysis.sql
+├── 10_cumulative_analysis.sql
+├── 11_performance_analysis.sql
+├── 12_data_segmentation.sql
+├── 13_part_to_whole_analysis.sql
+├── 14_customer_report.sql
+└── 15_product_report.sql
+````
+
+---
 
 ## 🔎 Analysis Workflow
 
-This project follows a **step-by-step analytical workflow**, where each SQL script builds logically on the previous one.
+This project follows a **step-by-step analytical pipeline**, where each script builds logically on the previous one.
 
 ### 1️⃣ Database Initialization
-- Create database and base structure
-- Prepare environment for analytics
 
-**Script**
-- `00_init_database.sql`
-
----
+* Create database and base schema
+  **Script**: `00_init_database.sql`
 
 ### 2️⃣ Database Exploration
-- Explore database metadata
-- Understand tables, columns, and data types
 
-**Script**
-- `01_database_exploration.sql`
-
----
+* Explore tables, columns, and metadata
+  **Script**: `01_database_exploration.sql`
 
 ### 3️⃣ Dimensions Exploration
-- Analyze dimension tables
-- Understand categorical attributes and hierarchies
 
-**Script**
-- `02_dimensions_exploration.sql`
-
----
+* Analyze dimension attributes and hierarchies
+  **Script**: `02_dimensions_exploration.sql`
 
 ### 4️⃣ Date Range Exploration
-- Inspect date fields across tables
-- Understand time coverage and data availability
 
-**Script**
-- `03_date_range_exploration.sql`
-
----
+* Understand time coverage of the dataset
+  **Script**: `03_date_range_exploration.sql`
 
 ### 5️⃣ Measures Exploration
-- Analyze numeric measures (sales, quantity, price)
-- Validate ranges and data consistency
 
-**Script**
-- `04_measures_exploration.sql`
-
----
+* Validate numeric measures (sales, quantity, price)
+  **Script**: `04_measures_exploration.sql`
 
 ### 6️⃣ Magnitude Analysis
-- Measure contribution across customers, products, categories, and regions
-- Identify dominant entities
 
-**Script**
-- `05_magnitude_analysis.sql`
-
----
+* Measure contribution across entities
+  **Script**: `05_magnitude_analysis.sql`
 
 ### 7️⃣ Ranking Analysis
-- Rank customers, products, and regions by performance
-- Identify top and bottom performers
 
-**Script**
-- `06_ranking_analysis.sql`
-
----
+* Identify top and bottom performers
+  **Script**: `06_ranking_analysis.sql`
 
 ### 8️⃣ Exploratory Data Analysis (EDA)
-- Explore distributions, relationships, and anomalies
-- Understand data behavior before final analytics
 
-**Script**
-- `07_exploratory_data_analysis(EDA).sql`
-
----
+* Explore distributions, relationships, and anomalies
+  **Script**: `07_exploratory_data_analysis(EDA).sql`
 
 ### 9️⃣ Final Analytics
-- Generate business-ready KPIs and insights
-- Prepare datasets for dashboards
 
-**Script**
-- `08_final_analytics.sql`
-
----
+* Generate business-ready KPIs
+  **Script**: `08_final_analytics.sql`
 
 ### 🔟 Change Over Time Analysis
-- Analyze trends, growth, and seasonality
-- Perform time-series analysis
 
-**Script**
-- `09_change_over_time_analysis.sql`
-
----
+* Analyze trends and seasonality
+  **Script**: `09_change_over_time_analysis.sql`
 
 ### 1️⃣1️⃣ Cumulative Analysis
-- Track running totals of sales, orders, and customers
-- Understand long-term growth patterns
 
-**Script**
-- `10_cumulative_analysis.sql`
-
----
+* Track running totals and long-term growth
+  **Script**: `10_cumulative_analysis.sql`
 
 ### 1️⃣2️⃣ Performance Analysis
-- Compare performance across customers, products, categories, and regions
 
-**Script**
-- `11_performance_analysis.sql`
-
----
+* Compare customers, products, and regions
+  **Script**: `11_performance_analysis.sql`
 
 ### 1️⃣3️⃣ Data Segmentation
-- Segment customers and products based on value and behavior
 
-**Script**
-- `12_data_segmentation.sql`
-
----
+* Segment customers and products by behavior and value
+  **Script**: `12_data_segmentation.sql`
 
 ### 1️⃣4️⃣ Part-to-Whole Analysis
-- Measure percentage contribution of entities to overall totals
 
-**Script**
-- `13_part_to_whole_analysis.sql`
-
----
+* Measure percentage contribution
+  **Script**: `13_part_to_whole_analysis.sql`
 
 ### 1️⃣5️⃣ Reporting Layer
-- Generate business-ready customer and product reports
 
-**Scripts**
-- `14_customer_report.sql`
-- `15_product_report.sql`
+* Generate customer and product reports
+  **Scripts**:
+* `14_customer_report.sql`
+* `15_product_report.sql`
 
 ---
 
@@ -215,110 +154,111 @@ This project follows a **step-by-step analytical workflow**, where each SQL scri
 The Power BI dashboard is designed **page-wise**, with each page answering a specific business question.
 
 ### Dashboard Pages
-1. Executive Summary  
-2. Sales Trend Analysis  
-3. Cumulative Growth  
-4. Product Performance  
-5. Customer Performance  
-6. Ranking Analysis  
-7. Customer Segmentation  
-8. Product Segmentation  
-9. Part-to-Whole Analysis  
-10. Detailed Customer & Product Reports  
 
-Each page is directly mapped to one or more SQL analysis scripts.
+1. Executive Summary
+2. Sales Trend Analysis
+3. Cumulative Growth
+4. Product Performance
+5. Customer Performance
+6. Ranking Analysis
+7. Customer Segmentation
+8. Product Segmentation
+9. Part-to-Whole Analysis
+10. Detailed Customer & Product Reports
 
 ---
 
 ## 🖼️ Dashboard Screenshots
 
-> Dashboard screenshots are stored inside the `screenshots/` folder.
+Screenshots are stored inside the `screenshots/` folder.
 
 ```md
 ![Executive Summary](screenshots/executive_summary.png)
 ![Sales Trends](screenshots/sales_trends.png)
 ![Customer Segmentation](screenshots/customer_segmentation.png)
+```
 
+---
 
 ## 📐 Power BI DAX Highlights
 
-The dashboard uses optimized and reusable DAX measures to support business analytics.
+The dashboard uses optimized and reusable DAX measures, including:
 
-### Key Measures
-- **Total Sales**
-- **Total Orders**
-- **Total Customers**
-- **Average Order Value (AOV)**
-- **Month-over-Month Sales Growth**
-- **Cumulative Sales**
-- **Revenue Contribution (%)**
-- **Customer & Product Ranking**
-- **Customer and Product Segmentation**
+* Total Sales
+* Total Orders
+* Total Customers
+* Average Order Value (AOV)
+* Month-over-Month Sales Growth
+* Cumulative Sales
+* Revenue Contribution (%)
+* Customer & Product Ranking
+* Customer and Product Segmentation
 
-These measures ensure:
-- Consistent calculations across visuals
-- Better performance and scalability
-- Easy maintenance and extensibility
+These measures ensure consistency, performance, and scalability.
 
 ---
 
 ## 🎯 Key Business Insights
 
-Insights derived from the analysis include:
+Key insights derived from the analysis include:
 
-- A small group of customers contributes a significant share of total revenue
-- Certain product categories dominate overall sales and quantity
-- Sales show clear seasonal patterns over time
-- Revenue distribution follows the Pareto (80/20) principle
-- Customer segmentation reveals distinct behavioral and value-based groups
-
-These insights help support strategic decision-making and business planning.
+* A small group of customers contributes a large portion of total revenue
+* Certain product categories dominate sales and quantity
+* Sales exhibit seasonal trends over time
+* Revenue distribution follows the Pareto (80/20) principle
+* Clear customer and product segments emerge based on behavior and value
 
 ---
 
 ## 🚀 How to Run This Project
 
-Follow the steps below to reproduce the analysis:
-
 1. Clone the GitHub repository
-2. Execute SQL scripts sequentially:
-   - Start from `00_init_database.sql`
-   - End with `15_product_report.sql`
-3. Load the final tables into Power BI
+2. Execute SQL scripts sequentially from:
+
+   * `00_init_database.sql`
+   * to `15_product_report.sql`
+3. Load tables into Power BI
 4. Create relationships using a star schema
-5. Add the provided DAX measures
-6. Build dashboard pages according to the page-wise mapping
+5. Add DAX measures
+6. Build dashboard pages as per the mapping
 
 ---
 
 ## 📌 Future Enhancements
 
-Planned improvements for future iterations:
+Potential future improvements include:
 
-- Add profit and margin analysis
-- Implement RFM (Recency, Frequency, Monetary) segmentation
-- Automate ETL pipelines
-- Enable scheduled data refresh
-- Deploy dashboard to Power BI Service
+* Profit and margin analysis
+* RFM (Recency, Frequency, Monetary) segmentation
+* Automated ETL pipelines
+* Scheduled data refresh
+* Deployment to Power BI Service
 
 ---
 
 ## 🤝 Connect With Me
 
-**Pranav**  
-🎓 BE (Electronics & Telecommunication)  
-📊 Aspiring Data Analyst  
+**Pranav**
+🎓 BE (Electronics & Telecommunication)
+📊 Aspiring Data Analyst
 
-🔗 LinkedIn: *add link*  
-🔗 GitHub: *add link*  
+🔗 LinkedIn: *add link*
+🔗 GitHub: *add link*
 🔗 Portfolio: *add link*
 
 ---
 
 ## ✅ Final Note
 
-This project showcases:
-- End-to-end data analytics workflow
-- Strong SQL and Power BI integration
-- Industry-aligned analytical approach
-- Portfolio-ready project structure
+This project demonstrates:
+
+* A complete data analytics lifecycle
+* Strong SQL and Power BI integration
+* Industry-aligned analytical thinking
+* A portfolio-ready project structure
+
+```
+
+
+Just tell me 👍
+```
