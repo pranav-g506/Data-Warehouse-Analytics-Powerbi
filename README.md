@@ -171,12 +171,9 @@ The Power BI dashboard is designed **page-wise**, with each page answering a spe
 ## 🖼️ Dashboard Screenshots
 
 Screenshots are stored inside the `screenshots/` folder.
+<img width="1437" height="810" alt="Screenshot 2026-02-11 193431" src="https://github.com/user-attachments/assets/e33b596e-f7cd-4bdb-9bd3-f8fa2910867c" />
 
-```md
-![Executive Summary](C:\Users\ADMIN\OneDrive\Pictures\Screenshots)
-![Sales Trends](C:\Users\ADMIN\OneDrive\Pictures\Screenshots)
-![Customer Segmentation](screenshots/customer_segmentation.png)
-```
+<img width="1432" height="800" alt="Screenshot 2026-02-11 193512" src="https://github.com/user-attachments/assets/a6fb52a4-a66e-43e5-8af5-79e244e75e0a" />
 
 ---
 
